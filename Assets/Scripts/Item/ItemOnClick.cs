@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class ItemOnClick : MonoBehaviour
 {
-    private bool isClicked = false;
+    public bool isClicked = false;
 
     private void OnMouseDown()
     {
+        Debug.Log($"Clicked: {gameObject.name}");
         if (!isClicked)
         {
-            Debug.Log("Å¬¸¯");
-
             Item item = GetComponent<Item>();
             if (item != null && ItemController.Instance != null)
             {
